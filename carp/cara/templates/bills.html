@@ -1,0 +1,131 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>bills</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            padding: 0 8%;
+            background-color: #F3ECDB;
+        }
+
+        .container h1 {
+            text-align: center;
+            padding-top: 10%;
+            margin-bottom: 60px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: '';
+            background: #FF6F3D;
+            width:  273px;
+            height: 5px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .bills {
+            text-align: center;
+            padding: 25px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+            border: 1px solid #FF6F3D;
+            border-radius: 2%;
+        }
+
+        .bills i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .bills img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .bills h2 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .bills:hover {
+            background-color: #FF6F3D;
+            color: #fff;
+            transform: scale(1.05);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cost Of Available Parts</h1>
+        <div class="row">
+            <div class="bills">
+                <img src="{% static 'img/s1.png'%}">
+                <h2>Tyres</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 500</b></p>
+
+            </div>
+            <div class="bills">
+                <img src="{% static 'img/s2.png'%}">
+                <h2>Mirror</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 700</b></p>
+            </div>
+            <div class="bills">
+                <img src="{% static 'img/s3.png'%}">
+                <h2>Seat Cover</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 300</b></p>
+            </div>
+            <div class="bills">
+                <img src="{% static 'img/s4.png'%}">
+                <h2>Tool Kit</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 200</b></p>
+            </div>
+            <div class="bills">
+                <img src="{% static 'img/s5.png'%}">
+                <h2>Handle Cover</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 100</b></p>
+            </div>
+            <div class="bills">
+                <img src="{% static 'img/s6.png'%}">
+                <h2>Side Bags</h2>
+                <hr>
+                <p>The cost of available tyres in our organisation is : <b>Rs. 150</b></p>
+            </div>
+        </div>
+    </div>

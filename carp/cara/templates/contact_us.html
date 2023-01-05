@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .contact-section h1::after {
+            content: '';
+            background: #FF6F3D;
+            width: 120px;
+            height: 6px;
+            position: absolute;
+            bottom: 491px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-section {
+            background: #F3ECDB;
+            background-size: cover;
+            padding: 40px 0;
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            color: rgb(14, 1, 1);
+        }
+
+        .border {
+            width: 100px;
+            height: 10px;
+            background: #34495e;
+            margin: 40px auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .contact-form-text {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 47px 0;
+            border: 5px;
+            background:  #f99b80;
+            padding: 20px 40px;
+            outline: none;
+            color:  black;
+            transition: 0.5s;
+            border-radius: 3%;
+        }
+
+        .contact-form-text:focus {
+            box-shadow: 0 0 4px 4px  #FF6F3D;
+        }
+
+        .texrarea.contact-form-text {
+            resize: none;
+            height: 120px;
+        }
+
+        .contact-form-btn {
+            float: right;
+            border: 0;
+            background-color: #FF6F3D;
+            color: #fff;
+            padding: 12px 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .contact-form-btn:hover {
+            background:  #c94426;
+            border: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <form class="contact-form"  method="post">
+            {% csrf_token %}
+            <input type="text" class="contact-form-text" placeholder="your name" name="fname">
+            <input type="email" class="contact-form-text" placeholder="your email" name="mail_id">
+            <input type="text" class="contact-form-text" placeholder="your phone" name="phno">
+            <textarea class="contact-form-text" placeholder="your message" name="msg"></textarea>
+            <input type="submit" class="contact-form-btn" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>

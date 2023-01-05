@@ -1,0 +1,135 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            padding: 0 8%;
+            background-color: #F3ECDB;
+        }
+
+        .container h1 {
+            text-align: center;
+            padding-top: 10%;
+            margin-bottom: 60px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: '';
+            background: #FF6F3D;
+            width: 100px;
+            height: 5px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .service {
+            text-align: center;
+            padding: 25px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s
+        }
+
+        .service i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .service img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .service h2 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .service:hover {
+            background-color: #FF6F3D;
+            color: #fff;
+            transform: scale(1.05);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Servies</h1>
+        <div class="row">
+            <div class="service">
+                <img src="{% static 'img/s1.png'%}">
+                <h2>Easy and convenient service</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!
+
+                </p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/s2.png'%}">
+                <h2>Good Quality Tools</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/s3.png'%}">
+                <h2>Best Tyres</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/s4.png'%}">
+                <h2>Better Infrastructure</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/s5.png'%}">
+                <h2>Essential Service Value Package</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/s6.png'%}">
+                <h2>Immediate Delivery Of vehicle</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, harum!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

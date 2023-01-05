@@ -1,0 +1,407 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Car Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+      function tetxarea(params) {
+        area = getele
+        
+      }
+    </script>
+</head>
+
+<body>
+  <header class="header-area">
+    <div class="navbar-area">
+      <nav class="site-navbar">
+        <a href="#home" class="site-logo">MOTOW</a>
+
+        <div class="linsk flex">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about_us/">About</a></li>
+            <li><a href="services/">Service</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="bill/">Bills</a></li>
+      
+          </ul>
+
+          <div class="account">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-phone-alt"> </i>
+            <span>Call : +123 456 7898</span>
+          </div>
+
+
+          <div class="nav-toggler">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.site-navbar ul');
+    const navLinks = document.querySelectorAll('.site-navbar a');
+
+    allEventListners();
+
+    function allEventListners() {
+      navToggler.addEventListener('click', togglerClick);
+      navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    function togglerClick() {
+      navToggler.classList.toggle('toggler-open');
+      navMenu.classList.toggle('open');
+    }
+  </script>
+
+
+
+  <section class="home top">
+    <div class="container">
+      <div class="circle"> </div>
+      <div class="owl-carousel owl-theme">
+        <div class="item flex">
+          <div class="left mtop">
+            <h1>Car Repair And Maintenance</h1>
+            <p>We provide best services for car maintainence.You can book your order now and we will contact you as soon
+              as possible. we have high class tool kits that will be beneficial for your cars. We understand your
+              hardwork taken to buy a car that's why we give you very sophisticated treatmenrt.<b>BOOK YOUR ORDER
+                NOW</b> </p>
+            <div class="button">
+              <button class="btn1">Read More</button>
+            
+            </div>
+          </div>
+          <div class="right mtop">
+            <img src="{% static 'img/home.png'%}" alt="">
+          </div>
+        </div>
+        <div class="item flex">
+          <div class="left mtop">
+            <h1>Car Repair And Maintenance</h1>
+            <p>Rishi Automobile And Service Center is a Motorcycle repair shop located in S-417, Kanpur - Lucknow Rd,
+              near One Up Motors, Lucknow, Uttar Pradesh
+            </p>
+            <div class="button">
+              <button class="btn1">Read More</button>
+            
+            </div>
+          </div>
+          <div class="right mtop">
+            <img src="{% static 'img/home.png'%}" alt="">
+          </div>
+        </div>
+        <div class="item flex">
+          <div class="left mtop">
+            <h1>Car Repair And Maintenance</h1>
+            <p>Maintenance is regular service that will help prolong the life of your vehicle, while auto repair is when
+              a part or fluid is not performing and needs to be fixed. Without proper maintenance, pricey repairs might
+              be needed.
+            </p>
+            <div class="button">
+              <button class="btn1">Read More</button>          
+            </div>
+          </div>
+          <div class="right mtop">
+            <img src="{% static 'img/home.png'%}" alt="wait for download">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+  <section class="services">
+    <div class="container">
+      <h1>Our Services</h1>
+      <hr>
+      <div class="content grid mtop">
+        <div class="box">
+          <img src="{% static 'img/s1.png'%}" alt="unable to install">
+          <h3>Easy and convenient service</h3>
+          <p>Very good and prompt service. Transparent in the dealing. Best quality service delivered at an affordable
+            rate.Hassle-free experience to all te viewers.</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/s2.png'%}" alt="unable to install">
+          <h3>Good Quality Tools</h3>
+          <p>A jack, funnels, multimeter, fuse, torque wrench, breaker bar, socket adapter, clamp, and other standard
+            tools can also be used to fix cars. Many of this equipment is reasonably priced if you want to work in
+            vehicle maintenance.</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/s3.png'%}" alt="unable to install">
+          <h3>Best Tyres</h3>
+          <p>ZLX tops our list of best Car tyre in India.We are very glad to tell our customers that we have <b>partnership with ZLX Tyres.</b></p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/s4.png'%}" alt="unable to install">
+          <h3>Better Infrastructure</h3>
+          <p>We prvide quick delivery of your vehicle as per your convenience.</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/s5.png'%}" alt="unable to install">
+          <h3>Essential Service Value Package-2 years</h3>
+          <p>Free labour costs on wheel alignment and balancing, free pick up and drop services and much more</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/s6.png'%}" alt="unable to install">
+          <h3>Immediate Delivery Of vehicle</h3>
+          <p>Generators on the Internet tend to repeat predefined chunks as necessary</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about">
+    <div class="container flex">
+      <div class="circle"></div>
+      <div class="left top">
+        <img src="{% static 'img/a.png'%}" alt="">
+      </div>
+      <div class="right top">
+        <h1>About Us </h1>
+        <p>We provide best services across the North India.Now we also started dealing with foreign constructin.Our
+          materials and tools are based of American Technology and cnstructed in India (Noida and Delhi). Ypu can easily
+          bok your orders as we are expert in transforming any destructive vehicle into brand new one. </p>
+        <button class="btn2">Read More</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="services choose top">
+    <div class="container">
+      <h1>Why Choose Us</h1>
+
+      <div class="content grid mtop">
+        <div class="box">
+          <img src="{% static 'img/w1.png'%}" alt="">
+          <h3>Best Workers </h3>
+          <p>Our company have professional and well trained staff.And our staff is experienced also.So there is no doubt of staff's fault. </p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/w2.png'%}" alt="">
+          <h3>Best Materials </h3>
+          <p>We order all our material from cerified organisations of Noida / Delhi and Banglore.That is why we give 100% assurance to our customers.</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="box">
+          <img src="{% static 'img/w3.png'%}" alt="">
+          <h3>Best Service </h3>
+          <p>A company runs by its staff and good quality assurance.And <b>MOTOW</b> provide both.Therefore,assurance of good quality automatically occurs.</p>
+          <a href="#">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="customer top">
+    <div class="container">
+      <h1>Testimonial</h1>
+      <p>Read what our customers have to say about the service they’ve received from <B>MOTOW</B> </p>
+
+      <div class="owl-carousel owl-theme mtop content">
+        <div class="item flex">
+          <div class="image">
+            <div class="img">
+              <img src="{% static 'img/meenumam.jpeg'%}" alt="">
+            </div>
+          </div>
+          <div class="text">
+            <div class="heading flex1">
+              <div class="para">
+                <h3>Ms Meenu Verma</h3>
+                <h5>CUSTOMER</h5>
+              </div>
+              <div class="para">
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <p>I really like te way this company treated us .Their quality is very awesome and the time limit of
+              maintenance is very shprt. so if any one want emrgency services then they can get very easily here.The
+              prize was also not very expensive.</p>
+          </div>
+        </div>
+        <div class="item flex">
+          <div class="image">
+            <div class="img">
+              <img src="{% static 'img/rohitsir.jpg'%}" alt="">
+            </div>
+          </div>
+          <div class="text">
+            <div class="heading flex1">
+              <div class="para">
+                <h3>Mr. Rohit Kapoor</h3>
+                <h5>CUSTOMER</h5>
+              </div>
+              <div class="para">
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <p>My Hyundai Grand i10 was sent for servicing. I was surprised to see that the service process was so
+              transparent that I could really be with my car and monitor all the work that was being done! Authorised
+              service centres have never allowed me that.</p>
+          </div>
+        </div>
+        <div class="item flex">
+          <div class="image">
+            <div class="img">
+              <img src="{% static 'img/raisir.jpg'%}" alt="">
+            </div>
+          </div>
+          <div class="text">
+            <div class="heading flex1">
+              <div class="para">
+                <h3>Dr. A K Rai</h3>
+                <h5>CUSTOMER</h5>
+              </div>
+              <div class="para">
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <p>A nice workshop.With good technicians. On overall experience, I will rate it as one of the best workshops
+              I have ever been to. My car’s service was done in 4 hours which is really awesome & the concept of free
+              pickup drop is appreciated. Will recommend to all of my friends and family.Decent mechanics. Has a very
+              huge demand, quality of work is also good.
+              I just had a small minor checkup done here and it was done quickly with minor charges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      navText: ["<i class='far fa-chevron-left'></i>", "<i class='far fa-chevron-right'></i>"],
+      responsive: {
+        512: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+  <section class="contact top">
+    <div class="container flex">
+      <div class="circle"> </div>
+      <div class="left">
+        <h1>Book Your Order Now</h1>
+
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="text" placeholder="Your Email">
+          <input type="text" placeholder="Your Phone">
+          <textarea rows="5"  name="textarea" cols="80">Message</textarea>
+          <button class="btn2">SEND</button>
+        </form>
+      </div>
+      <div class="right">
+        <div class="img">
+          <img src="{% static 'img/contact.png'%}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container top">
+      <div class="content grid">
+        <div class="box flex">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>India,Lucknow</span>
+        </div>
+        <div class="box flex">
+          <i class="fa fa-phone-alt"></i>
+          <span>9170226804</span>
+        </div>
+        <div class="box flex">
+          <i class="fa fa-envelope"></i>
+          <span>pandeyrenu236@gmail.com</span>
+        </div>
+        <div class="box flex">
+          <input type="text" placeholder="Your Email address">
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+      </div>
+
+      <div class="soical mtop">
+        <div class="logo">
+          <h1>MOTOW</h1>
+        </div>
+        <ul>
+          <li> <i class="fab fa-facebook-f"></i></li>
+          <li> <i class="fab fa-instagram"></i></li>
+          <li> <i class="fab fa-twitter"></i></li>
+          <li> <i class="fab fa-youtube"></i></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p><i>This is a car repairing website.</i></p>
+  </div>
+</body>
+
+</html>
